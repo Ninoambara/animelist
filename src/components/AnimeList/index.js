@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Animelist = ({ api }) => {
   return (
-    <div className="box-border grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 md:px-20 px-5 py-3">
+    <div className="box-border grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 md:px-20 px-5 py-5">
       {api.data.map((anime) => {
         return (
           <div
@@ -12,7 +12,7 @@ const Animelist = ({ api }) => {
             <div className="relative group transition-all">
               <div className="relative">
                 <Image
-                  className="object-cover"
+                  className="object-cover img-list"
                   src={anime.images.webp.image_url}
                   width={350}
                   height={350}

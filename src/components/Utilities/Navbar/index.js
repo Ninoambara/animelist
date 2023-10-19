@@ -8,14 +8,14 @@ const Navbar = () => {
           ANIMELIST
         </Link>
         <div className="">
-          <ul className="flex gap-5 flex-row">
-            <li className="bg-orange">Homepage</li>
-            <li>Categories</li>
-            <li>Top Anime</li>
-            <li>Contact</li>
+          <ul className="flex justify-center cursor-pointer items-center md:gap-5 gap-1 md:flex-row flex-wrap md:text-sm text-xs">
+            <li className="p-2 bg-orange-600 ">Homepage</li>
+            <li className="p-2">Categories</li>
+            <li className="p-2">Top Anime</li>
+            <li className="p-2">Contact</li>
           </ul>
         </div>
-        <input className="p-1 text-sm" placeholder="mamamamam" />
+        <input className="p-1 text-sm rounded" placeholder="Search Anime" />
       </div>
     </header>
   );
