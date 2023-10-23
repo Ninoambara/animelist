@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const Header = ({ title, toLink }) => {
