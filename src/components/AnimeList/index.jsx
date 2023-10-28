@@ -5,7 +5,7 @@ import Image from "next/image";
 import Comment from "./Comment";
 import Viewer from "./Viewer";
 import Episode from "./Episode";
-import Notfound from "../Utilities/Notfound";
+import Notfound from "../Notfound";
 
 const Animelist = ({ api }) => {
   if (!api.data || api.data.length === 0) {
@@ -32,7 +32,7 @@ const Animelist = ({ api }) => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between  text-white text-sm font-thin">
                   <Comment />
-                  <Viewer />
+                  <Viewer viewer={anime.members} />
                 </div>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity flex justify-center items-center">
                   <h4 className="text-white text-center font-bold md:text-md text-sm p-4">

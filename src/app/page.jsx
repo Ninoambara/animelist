@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Animelist from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
-import Banner from "@/components/Utilities/Banner";
+import Banner from "@/components/Banner";
 
 export default async function Home() {
   const response = await fetch(
