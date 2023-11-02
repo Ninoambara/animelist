@@ -11,15 +11,17 @@ export default async function Home() {
 
   return (
     <>
-      <Banner />
+      <section className="overflow-hidden ">
+        <Banner />
+      </section>
       <section>
         <Header title={"Top Anime"} toLink={"animes"} />
-        <Animelist api={topAnime} />
+        <Animelist api={topAnime} type={"anime"} />
       </section>
 
       <section>
         <Header title={"Top Manga"} toLink={"mangas"} />
-        <Animelist api={topManga} />
+        <Animelist api={topManga} type={"manga"} />
       </section>
     </>
   );

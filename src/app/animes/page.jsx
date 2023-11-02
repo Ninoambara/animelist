@@ -23,7 +23,7 @@ export default function Page() {
     <>
       <section>
         <Header title={"All Anime"} />
-        <Animelist api={topAnime} />
+        <Animelist api={topAnime} type={"anime"} />
         <Pagination
           setPage={setPage}
           page={page}

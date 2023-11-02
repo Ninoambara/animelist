@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-900 mt-4 sticky top-[100vh]">
+    <footer className="bg-gray-900 rounded-lg shadow w-full relative bottom-0 dark:bg-gray-900 mt-4">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
@@ -12,7 +12,7 @@ const Footer = () => {
               className="h-8 mr-3"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl text-white   font-semibold whitespace-nowrap dark:text-white">
               Animelist
             </span>
           </a>

@@ -7,18 +7,19 @@ import Viewer from "./Viewer";
 import Episode from "./Episode";
 import Notfound from "../Notfound";
 import Link from "next/link";
+import Loading from "@/app/loading";
 
-const Animelist = ({ api }) => {
-  if (!api.data || api.data.length === 0) {
+const Animelist = ({ api, type }) => {
+  if (!api.data || api.data?.length === 0) {
     return <Notfound />;
   }
 
   return (
     <div className="box-border grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 md:px-20 px-5 py-5">
-      {api.data.map((anime) => {
+      {api.data?.map((anime) => {
         return (
           <Link
-            href={`/detail/${anime.mal_id}`}
+            href={`/detail/${type}/${anime.mal_id}`}
             key={anime.mal_id}
             className="bg-slate-400 rounded-lg overflow-hidden"
           >
