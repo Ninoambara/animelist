@@ -8,8 +8,21 @@ import Episode from "./Episode";
 import Notfound from "../Notfound";
 import Link from "next/link";
 import Loading from "@/app/loading";
+import { useEffect, useState } from "react";
 
 const Animelist = ({ api, type }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   if (!api.data || api.data?.length === 0) {
     return <Notfound />;
   }

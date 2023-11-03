@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useRef } from "react";
 
 const Navbar = () => {
   const searchRef = useRef();
+  const pathName = usePathname();
+
   const router = useRouter();
 
   const handleSearch = (event) => {
@@ -22,14 +24,30 @@ const Navbar = () => {
           <ul className="flex justify-center cursor-pointer items-center md:gap-5 gap-1 md:flex-row flex-wrap md:text-sm text-xs">
             <Link
               href="/"
-              className={router.pathname == "/" ? "bg-orange-600 p-2" : "p-2"}
+              className={
+                pathName == "/" ? "bg-orange-600 p-2 transition-all" : "p-2"
+              }
             >
               Homepage
             </Link>
-            <Link href="/mangas" className="p-2">
+            <Link
+              href="/mangas"
+              className={
+                pathName == "/mangas"
+                  ? "bg-orange-600 p-2 transition-all"
+                  : "p-2"
+              }
+            >
               Top Manga
             </Link>
-            <Link href="/animes" className="p-2">
+            <Link
+              href="/animes"
+              className={
+                pathName == "/animes"
+                  ? "bg-orange-600 p-2 transition-all"
+                  : "p-2"
+              }
+            >
               Top Anime
             </Link>
             <Link href="/" className="p-2">

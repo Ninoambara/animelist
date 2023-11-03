@@ -12,7 +12,7 @@ const page = async ({ params }) => {
   return (
     <>
       <Header title={`Search for ${decodeUri}`} />
-      <Animelist api={searchAnime} />
+      <Animelist api={searchAnime} type={"anime"} />
     </>
   );
 };
