@@ -101,7 +101,8 @@ const Page = async ({ params }) => {
       </div>
 
       <div>
-        <h1> disini akan ada banyak sekali </h1>
+
+        <h1> disini akan ada banyak sekali aku ubahh dehhh</h1>
       </div>
     </>
   );
